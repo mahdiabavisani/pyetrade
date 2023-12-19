@@ -105,14 +105,14 @@ class ETradeOAuth(object):
             options = webdriver.ChromeOptions()
             if headless:
                 options.headless = True
-            service = Service(executable_path='chromedriver.exe')
+            service = Service(executable_path='chromedriver')
             driver = webdriver.Chrome(service=service, options=options)
 
         elif browser == 'edge':
             options = webdriver.EdgeOptions()
             if headless:
                 options.headless = True
-            service = Service(executable_path='msedgedriver.exe')
+            service = Service(executable_path='msedgedriver')
             driver = webdriver.Edge(service=service, options=options)
 
         driver.get(formated_auth_url)

@@ -1,3 +1,9 @@
+# changes in the forked version:
+
+modified to work on a mac. Make sure to update `msedgedriver` with a version that matches the version of your Microsoft Edge. You can check the version of your Microsoft Edge from "About Microsoft Edge".
+
+Download a matching driver from [Microsoft Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) and replace `msedgedriver`.
+
 # pyetrade
 
 Python E-Trade API Wrapper
@@ -32,13 +38,13 @@ Market API -
 pip install git+https://github.com/nathanramoscfa/pyetrade.git#egg=pyetrade
 ```
 ### Install Selenium WebDriver
-This project requires the use of Selenium WebDriver in order to automatically log in to E-Trade through a browser. The browser can be [Chrome, Edge, Firefox, or Safari](https://selenium-python.readthedocs.io/installation.html#drivers), however, this project's code uses the [Microsoft Edge](https://www.microsoft.com/en-us/edge?exp=e502&form=MA13FJ) browser. Therefore, you will need to install the [Microsoft Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) to your project's directory. I have included a version "msedgedriver.exe" in the main directory of this repository, but, it needs to be the exact version that corresponds to your browser. I recommend you download the file directly from Microsoft using the instructions below. 
+This project requires the use of Selenium WebDriver in order to automatically log in to E-Trade through a browser. The browser can be [Chrome, Edge, Firefox, or Safari](https://selenium-python.readthedocs.io/installation.html#drivers), however, this project's code uses the [Microsoft Edge](https://www.microsoft.com/en-us/edge?exp=e502&form=MA13FJ) browser. Therefore, you will need to install the [Microsoft Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) to your project's directory. I have included a version "msedgedriver" (for mac) in the main directory of this repository, but, it needs to be the exact version that corresponds to your browser. I recommend you download the file directly from Microsoft using the instructions below. 
 
 To install Selenium WebDriver:
 1) Open your Microsoft Edge browser, select "Settings and more" at the top of the window, and then select "Settings". 
 2) Scroll down and select "About Microsoft Edge". The version will be located towards the top. The Selenium WebDriver included in this project's root directory uses Microsoft Edge browser Version 108.0.1462.54 (Official build) (64-bit), and can only control this version of the browser. 
 3) Go to Microsoft's official [webdriver page](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/). Download the Stable Channel version that corresponds to your version of the Microsoft Edge browser. From step 2, the version I would need to download is Version 108.0.1462.54: x64. This might be different for you so ensure you download the right version. 
-4) Extract the "msedgedriver.exe" to the folder where your project is located. Ensure that the [executable path](https://github.com/nathanramoscfa/pyetrade/blob/master/pyetrade/authorization.py#L100) of "msedgedriver.exe" is correct. 
+4) Extract the "msedgedriver" (for mac) to the folder where your project is located. Ensure that the [executable path](https://github.com/nathanramoscfa/pyetrade/blob/master/pyetrade/authorization.py#L100) of "msedgedriver" is correct. 
 
 If you want to use another browser than Microsoft Edge, then you will have to repeat these steps for that browser. 
 
